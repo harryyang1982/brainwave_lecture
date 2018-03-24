@@ -15,6 +15,9 @@ k <- sample(1:nrow(mpg), size = nrow(mpg) * 0.5)
 training_set <- mpg[k,]
 test_set <- mpg[-k,]
 
+# training_set <- mpg[mpg$class == "suv",]$cty
+# test_set <- mpg[mpg$class == "2seater",]$cty
+
 t.test(training_set$cty, test_set$cty)
 
 ### 회귀분석
